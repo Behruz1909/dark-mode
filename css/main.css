@@ -1,0 +1,48 @@
+:root {
+    --dark-mode: #1E2227;
+    --light-mode: #fff;
+}
+
+.wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 40vh; 
+}
+
+body.dark-mode {
+    background-color: var(--dark-mode);
+    color: var(--light-mode);
+}
+.input{
+    display: none;
+}
+
+.label{
+    display: inline-block;
+    width: 70px;
+    height: 30px;
+    padding: 2.5px;
+    border-radius: 30px;
+    background-color: grey;
+}
+.span{
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    border-radius: 50px;
+    background-color: #fff;
+    padding: 2.5px;
+    transition: all 0.3s ease-in-out;
+}
+.input:checked ~ label > span{
+    transform: translateX(40px);
+}
+
+.input:checked ~ label {
+    background-color: #fff;
+}
+
+.input:checked ~ label > span{
+    background-color: #1E2227;
+}
